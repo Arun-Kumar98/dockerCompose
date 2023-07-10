@@ -1,0 +1,16 @@
+version: "3"
+services:
+  infosys:
+    build: infosys/
+    ports:
+      - "8089:80"
+
+  infotech:
+    build: infotech/
+    ports:
+      - "8088:80"
+
+  tcs:
+    build: tcs/
+    ports:
+      - "8087:80"
