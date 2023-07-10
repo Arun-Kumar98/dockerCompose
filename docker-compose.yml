@@ -1,0 +1,16 @@
+version: "3"
+services:
+  infosys:
+    build: pubg/infosys/
+    ports:
+      - "8089:80"
+
+  infotech:
+    build: pubg/infotech/
+    ports:
+      - "8088:80"
+
+  tcs:
+    build: pubg/tcs/
+    ports:
+      - "8087:80"
