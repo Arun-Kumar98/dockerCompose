@@ -1,0 +1,38 @@
+version: "3"
+services:
+  infosys:
+    build: infosys/
+    ports:
+      - "8089:80"
+    volumes:
+      - "infosys-volume"
+    networks:
+      - "infosys-network"
+
+  infotech:
+    build: infotech/
+    ports:
+      - "8088:80"
+    volumes:
+      - "infotech-volume"
+    networks:
+      - "infotech-network"
+
+  tcs:
+    build: tcs/
+    ports:
+      - "8087:80"
+    volumes:
+      - "tcs-volume"
+    networks:
+      - "tcs-network"
+
+networks:
+  infosys-network:
+    driver: bridge
+
+  infotech-network:
+    driver: bridge
+
+  tcs-network:
+    driver: bridge
