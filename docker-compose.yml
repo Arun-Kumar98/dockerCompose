@@ -1,7 +1,7 @@
 version: "3"
 services:
   infosys:
-    build: infosys/
+    build: pubg/infosys/
     ports:
       - "8089:80"
     volumes:
@@ -10,7 +10,7 @@ services:
       - "infosys-network"
 
   infotech:
-    build: infotech/
+    build: pubg/infotech/
     ports:
       - "8088:80"
     volumes:
@@ -19,7 +19,7 @@ services:
       - "infotech-network"
 
   tcs:
-    build: tcs/
+    build: pubg/tcs/
     ports:
       - "8087:80"
     volumes:
